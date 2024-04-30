@@ -2,8 +2,9 @@
 #define fastio std::cin.tie(0)->sync_with_stdio(0);
 using namespace std;
 
-vector<int> adj[101];
-bool vis[101];
+const int SIZE = 101;
+vector<int> adj[SIZE];
+bool vis[SIZE];
 
 int main()
 {

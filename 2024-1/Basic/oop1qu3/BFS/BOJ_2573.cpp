@@ -91,9 +91,6 @@ bool isZero(pii& p)
 
 void melt()
 {
-	for (int i = 0; i < N; i++)
-		fill(nExtraZeros[i], nExtraZeros[i] + M, false);
-
 	auto& v = nonZeros;
 	v.erase(remove_if(v.begin(), v.end(), isZero), v.end());
 
@@ -104,6 +101,9 @@ void melt()
 
 		nZeros[cy][cx] += nExtraZeros[cy][cx];
 	}
+
+	for (int i = 0; i < N; i++)
+		fill(nExtraZeros[i], nExtraZeros[i] + M, 0);
 }
 
 int bfs(pii start)
